@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAフォーム</title>
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/questions.js" defer></script>
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+    <div id="suggest-block" class="suggest-block" data-open="false" onclick="openSuggest()">
+        <p id="suggest-first-text" class="suggest-first-text">質問に答えておすすめイベントを提案！</p>
+        <div id="suggest-block-inner" class="suggest-block-inner" data-visibility="false">
+            <button id="suggest-block-close" class="suggest-block-close" onclick="event.stopPropagation(); closeSuggest()">×</button>
+            <section id="suggest-question-block" class="suggest-question-block suggest-section" data-visibility="true">
+                <p class="suggest-question" id="suggest-question"></p>
+                <ul class="suggest-answers" id="suggest-answers"></ul>
+            </section>
+            <section id="suggest-event-block" class="suggest-event-block suggest-section" data-visibility="false">
+                <p>あなたにおすすめのイベントはこちら</p>
+                <div id="suggest-event"></div>
+            </section>
+            <button id="suggest-move-back" class="suggest-move-back" data-visibility="false">＜前の質問に戻る</button>
+        </div>
+    </div>
+</body>
+</html>
